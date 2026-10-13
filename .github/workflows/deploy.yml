@@ -16,6 +16,25 @@ jobs:
       - uses: actions/checkout@v4
       - name: Unpack compiled browser game
         run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, re
+          folder = Path('web-parts')
+          if folder.is_dir():
+              metadata = json.loads((folder / 'manifest.json').read_text())
+              chunks = []
+              for part in metadata['parts']:
+                  if not re.fullmatch(r'cargo-loop-web\.zip\.part-\d{3}', part['file']):
+                      raise ValueError('Invalid part name')
+                  data = (folder / part['file']).read_bytes()
+                  assert len(data) == part['bytes']
+                  assert hashlib.sha256(data).hexdigest() == part['sha256']
+                  chunks.append(data)
+              archive = b''.join(chunks)
+              assert len(archive) == metadata['bytes']
+              assert hashlib.sha256(archive).hexdigest() == metadata['sha256']
+              Path('cargo-loop-web.zip').write_bytes(archive)
+          PY
           mkdir -p site
           unzip -q cargo-loop-web.zip -d site
           test -s site/index.html
