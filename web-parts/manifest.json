@@ -1,39 +1,39 @@
 {
   "version": "0.2.16",
   "archive": "cargo-loop-web.zip",
-  "bytes": 11320544,
-  "sha256": "a3ebc5ece74b29ce2fa99b5cc17786a6ab8877dc8447f40d01fe5dd50c21a2b3",
+  "bytes": 11320614,
+  "sha256": "769b0117815bf693ab626ae38e15e27a5f52bf57a87fb7da1448e2d673f85f3b",
   "part_size": 2097152,
   "parts": [
     {
       "file": "cargo-loop-web.zip.part-001",
       "bytes": 2097152,
-      "sha256": "6bcf8579947fc014bbfed34c8ad17f94f66c2798069af103a7df858d104b6f39"
+      "sha256": "3efa73506044102360b87c19f44e52c63b62715babb1da8504b94dbc9827f5ff"
     },
     {
       "file": "cargo-loop-web.zip.part-002",
       "bytes": 2097152,
-      "sha256": "89e808c61a7cb888f8bf18c8c1ad2214883edff608a2dff27c4638f58b1c560d"
+      "sha256": "2c1f2e5cf208a04f4daa2b84e2789cbe2a71c1d62b39103439f6ce2a5f8271f7"
     },
     {
       "file": "cargo-loop-web.zip.part-003",
       "bytes": 2097152,
-      "sha256": "ef446c042ec28f82bd2813edbade6a6d48824e79d1f62d3e074f17509b0e0ac7"
+      "sha256": "a31585c87f8fff4f98b8bc3cdbfe856a95bf137caa313368d9677edde9a8e685"
     },
     {
       "file": "cargo-loop-web.zip.part-004",
       "bytes": 2097152,
-      "sha256": "6c26137b55888239a270b4ec80f910cc6bf28942c8c6a48339930815ce5dde40"
+      "sha256": "0ddd9f05c45118f0caa1f34a0a9e8325c958e4e807901a23d0e8ef74144e2eef"
     },
     {
       "file": "cargo-loop-web.zip.part-005",
       "bytes": 2097152,
-      "sha256": "c2ef967a4f1af1a6088d3d4aa03381f95e03fc0387c7f930c31c5a5a67eb78fb"
+      "sha256": "acd6e6e458d00bf7c811352cb316f315156df9c236cab5d529df1dba67ac6451"
     },
     {
       "file": "cargo-loop-web.zip.part-006",
-      "bytes": 834784,
-      "sha256": "adbf63ac90753d352b2c4041cf289000109565f0748896ab654c8da27664be27"
+      "bytes": 834854,
+      "sha256": "0165a497f4348b296adc18f4876ec016dde2243ec93d4b86636690cf90529f01"
     }
   ]
 }
