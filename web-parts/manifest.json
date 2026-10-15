@@ -1,39 +1,44 @@
 {
-  "version": "0.2.18",
+  "version": "0.2.19",
   "archive": "cargo-loop-web.zip",
-  "bytes": 11319947,
-  "sha256": "a069ca688f45d2a540c1ff451cfb7cb70c2584c07e0d4dcc9a72b9e33ebb40aa",
+  "bytes": 12765479,
+  "sha256": "a1d0a92cccb71c93385a363e0ccab553a19195af93919f24cdfab61ab3027c14",
   "part_size": 2097152,
   "parts": [
     {
       "file": "cargo-loop-web.zip.part-001",
       "bytes": 2097152,
-      "sha256": "9a32b1478aa70f2cad2654e4814826294366924841625f2ebdddd7b31d81bc85"
+      "sha256": "b2eb6a5a862c3f5930dcc4f1c941eca0814a4357f5fcc5655253971ccb558283"
     },
     {
       "file": "cargo-loop-web.zip.part-002",
       "bytes": 2097152,
-      "sha256": "f7cf4fc15ed78333c5f566be210f53d6530bda205febd6138b648b1bc43f4810"
+      "sha256": "7e55e3c8aae42336bd6ad71e8219154c9eaaa2d679bcf1597392cfe713a7c42a"
     },
     {
       "file": "cargo-loop-web.zip.part-003",
       "bytes": 2097152,
-      "sha256": "3fc6f7131fabe0aca120861fa688f472a8ffc09ef4e6c25debf0cbcd3898b591"
+      "sha256": "d4fd83a0cd22b7891f1dc173da15d7d4ca3806bccf406edfba8bc543fbc55150"
     },
     {
       "file": "cargo-loop-web.zip.part-004",
       "bytes": 2097152,
-      "sha256": "143cb688af8f09dea3d79f3aa99f7305f58d10bf0a773163160f915e4f7a3901"
+      "sha256": "3258c841b19b1619d3976c3b2c86a9eb717627971fc63e9fde04109109b92766"
     },
     {
       "file": "cargo-loop-web.zip.part-005",
       "bytes": 2097152,
-      "sha256": "dd630eab5ef8140f415a475e74604954a734053077f4b3a641875f75fdcefaf0"
+      "sha256": "04d8f15be0abdd78c9d3e478167caba23c0ccea18863a85e78385cd376e4be85"
     },
     {
       "file": "cargo-loop-web.zip.part-006",
-      "bytes": 834187,
-      "sha256": "11c769dbfc5cacc707077c99ecd1fa535146217090a12bdb84cef1aae869e60c"
+      "bytes": 2097152,
+      "sha256": "ca44f2e371cdaffc88548a3202f0956cb3157d216f8220ae9ee97c98127b1978"
+    },
+    {
+      "file": "cargo-loop-web.zip.part-007",
+      "bytes": 182567,
+      "sha256": "afc626a1cca37fa71a185f98e3b11f62d90fefd7e56ecd2075e540f6fd6f00ac"
     }
   ]
 }
