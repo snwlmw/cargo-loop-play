@@ -40,6 +40,7 @@ jobs:
           test -s site/index.html
           test -s site/index.wasm
           test -s site/index.pck
+          cp public/privacy.html site/privacy.html
           touch site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
