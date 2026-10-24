@@ -5,15 +5,16 @@ self.addEventListener('activate', event => {
     const keys = await caches.keys();
     await Promise.all(keys.filter(key => key.startsWith('Последний ящик ·-sw-cache-')).map(key => caches.delete(key)));
     await self.clients.claim();
+    await self.registration.unregister();
     const windows = await self.clients.matchAll({type:'window', includeUncontrolled:true});
     for (const client of windows) {
       if (client.url.startsWith(self.registration.scope) &&
           !new URL(client.url).pathname.endsWith('/privacy.html') &&
           !new URL(client.url).searchParams.has('closed')) {
-        await client.navigate(self.registration.scope + '?closed=1');
+        // Do not wait for navigation while activation is still completing.
+        client.navigate(self.registration.scope + '?closed=1').catch(() => {});
       }
     }
-    await self.registration.unregister();
   })());
 });
 self.addEventListener('fetch', event => {
