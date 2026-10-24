@@ -1,13 +1,9 @@
-# Последний ящик / Cargo Loop — 0.2.20
+# Cargo Loop browser distribution closed
 
-[Играть в браузере](https://snwlmw.github.io/cargo-loop-play/)
-
-500 уровней кампании, 9000 проверенных уникальных аркадных раскладок, отдельные сохранения трёх режимов, обучение и общая лига с недельным и месячным зачётом и архивом личных мест.
-
-Это готовая браузерная сборка Godot 4.6.2. Исходный проект хранится в отдельном закрытом репозитории. Android-интеграция VK Ad Network подготовлена отдельно; рекламные показы в этой версии выключены. Сохранения предыдущей версии продолжают использоваться.
-
-GitHub Pages собирает ZIP из частей web-parts/, проверяет SHA256 и публикует игру вместе с политикой конфиденциальности. build.json содержит версию и контрольную сумму архива.
-
-[Политика конфиденциальности](https://snwlmw.github.io/cargo-loop-play/privacy.html)
-
-Разработчик: snwlmw. Поддержка: cargoloopplay@gmail.com.
+The browser game was retired at the owner's request on 24 October 2026.
+The deployment publishes a closure notice and the existing privacy page only.
+Game archives and executable assets are no longer published.
+The retirement worker removes only this game's cached application resources;
+local saves and other applications are not erased.
+Previously downloaded offline copies and repository history cannot be remotely revoked.
+Android distribution: https://www.rustore.ru/catalog/app/org.cargoloop.game

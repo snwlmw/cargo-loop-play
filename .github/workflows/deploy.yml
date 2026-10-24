@@ -1,4 +1,4 @@
-name: Publish Cargo Loop game
+name: Publish browser closure notice
 on:
   push:
     branches: [main]
@@ -14,35 +14,14 @@ jobs:
       pages: write
     steps:
       - uses: actions/checkout@v4
-      - name: Unpack compiled browser game
+      - name: Prepare closure notice without game binaries
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import hashlib, json, re
-          folder = Path('web-parts')
-          if folder.is_dir():
-              metadata = json.loads((folder / 'manifest.json').read_text())
-              chunks = []
-              for part in metadata['parts']:
-                  if not re.fullmatch(r'cargo-loop-web\.zip\.part-\d{3}', part['file']):
-                      raise ValueError('Invalid part name')
-                  data = (folder / part['file']).read_bytes()
-                  assert len(data) == part['bytes']
-                  assert hashlib.sha256(data).hexdigest() == part['sha256']
-                  chunks.append(data)
-              archive = b''.join(chunks)
-              assert len(archive) == metadata['bytes']
-              assert hashlib.sha256(archive).hexdigest() == metadata['sha256']
-              Path('cargo-loop-web.zip').write_bytes(archive)
-          PY
           mkdir -p site
-          unzip -q cargo-loop-web.zip -d site
-          test -s site/index.html
-          test -s site/index.wasm
-          test -s site/index.pck
-          cp public/privacy.html site/privacy.html
-          cp web-parts/manifest.json site/build.json
+          cp public/index.html public/index.offline.html public/index.service.worker.js public/privacy.html public/404.html site/
           touch site/.nojekyll
+          test -s site/index.html
+          test ! -e site/index.wasm
+          test ! -e site/index.pck
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -57,6 +36,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Publish game
+      - name: Publish closure notice
         id: deployment
         uses: actions/deploy-pages@v4
